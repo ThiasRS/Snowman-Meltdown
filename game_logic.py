@@ -35,6 +35,22 @@ def check_win(secret_word, guessed_letters):
     return True
 
 
+def replay():
+    """Replays the game if user wants to play again."""
+    while True:
+        user_input = input("Do you want to play again? (y/n): ")
+        if len(user_input) == 1 and user_input.isalpha():
+            if user_input == "y":
+                play_game()
+                break
+            if user_input == "n":
+                print("Thank you for playing.")
+                break
+        else:
+            print("Please enter either 'y' or 'n'.")
+
+
+
 def play_game():
     secret_word = get_random_word()
     guessed_letters = []
@@ -70,3 +86,4 @@ def play_game():
 
 if __name__ == "__main__":
     play_game()
+    replay()
