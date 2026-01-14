@@ -48,7 +48,12 @@ def play_game():
             print("Congratulations, you won!")
             break
 
-        guess = input("Guess a letter: ").lower()
+        while True:
+            guess = input("Guess a letter: ").lower()
+            if len(guess) == 1 and guess.isalpha():
+                break
+            else:
+                print("Please enter just one letter.")
 
         if guess not in guessed_letters:
             guessed_letters.append(guess)
