@@ -77,7 +77,7 @@ def play_game():
         if guess not in secret_word:
             mistakes += 1
 
-        if mistakes == 3:
+        if mistakes == 7:
             print("Game Over! The word was: " + secret_word)
             print(STAGES[mistakes])
             break
