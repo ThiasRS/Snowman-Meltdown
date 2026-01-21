@@ -78,7 +78,9 @@ def play_game():
             mistakes += 1
 
         if mistakes == 7:
-            print("Game Over! The word was: " + secret_word)
+            print("Game Over! The word is: " + secret_word)
+            print("good job")
+            print("good Job")
             print(STAGES[mistakes])
             break
 
